@@ -1,0 +1,36 @@
+{
+"config": {
+"chainId": 150220241016,
+"homesteadBlock": 0,
+"eip150Block": 0,
+"eip155Block": 0,
+"eip158Block": 0,
+"byzantiumBlock": 0,
+"constantinopleBlock": 0,
+"petersburgBlock": 0,
+"istanbulBlock": 0,
+"berlinBlock": 0,
+"clique": {
+"period": 5,
+"epoch": 30000
+}
+},
+"difficulty": "1",
+"gasLimit": "8000000",
+"extradata": "0x00000000000000000000000000000000000000000000000000000000000000009129a96678342ea12e2e78189a81971e284685760000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+"alloc": {
+"9129a96678342ea12e2e78189a81971e28468576": { "balance": "3000000000000000000000000000" },
+"9a1ea84f5cac8e2164c1c8e8273a0df71746927b": { "balance": "3000000000000000000000000000" },
+"b27cbd69da0245d3e076a1e2244d4782a0ee9b82": { "balance": "3000000000000000000000000000" }
+}
+}
+
+/*
+0x45B4C5659042dDCcAb182412228FB1F8735F7b15 - созданный майнер
+geth account new --datadir data - создание нового аккаунта
+geth init --datadir data genesis.json - создание генезис блока
+
+geth --datadir data --networkid 150220241016 --unlock 0x45B4C5659042dDCcAb182412228FB1F8735F7b15 --allow-insecure-unlock --http --http.corsdomain="*" --http.api web3,eth,debug,personal,net,miner --miner.etherbase 0x45B4C5659042dDCcAb182412228FB1F8735F7b15 - запуск чатсной сети блокчейна
+geth attach --datadir data ipc:\\.\pipe\geth.ipc - создание отдельной консоли geth для того, чтобы управлять процессами в блокчейне
+    eth.blockNumber - номер блока
+    address=0x9FC83ac4c4f69B06Eb6a336B58469291E2cD497B */
